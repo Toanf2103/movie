@@ -1,25 +1,20 @@
 // Configuration Data
 const config = {
-    inviterName: "Toàn",
-    movieTitle: "Inside Out 2",
-    cinema: "CGV Vincom Đà Nẵng",
-    datetime: "2025-08-20T19:30:00+07:00",
+    inviterName: "Toanf",
+    movieTitle: "Cậu chọn 🤭🤭",
+    cinema: "",
+    datetime: "2025-08-5T19:30:00+07:00",
     seats: "H10–H11",
     contact: {
-        zalo: "0123456789",
-        phone: "0123456789"
+        zalo: "0523919941",
+        phone: "0523919941"
     },
     discordWebhook: "https://discord.com/api/webhooks/1406634995082072134/jFLzfPCNt5eEJAWSZlvDHRHUhj49WkiLx2tpe7ggfnVKUXLYdjmKaPmReNKCJG_M-5_Z"
 };
 
 // Random invitation messages
 const invitationMessages = [
-    "Tớ có 2 vé xịn và 1 trái tim hơi rụt rè. Cậu đi cùng nha? 🥹",
-    "Chiếu phim hay, ghế đẹp, người mời dễ thương (tự chấm). Còn thiếu mỗi cậu thôi á! ✨",
-    "Đố cậu đoán: điều gì đáng yêu hơn bỏng bơ? → Cậu đi cùng tớ. 😌🍿",
-    "Tớ nghe nói xem phim một mình sẽ bị ế. Cậu cứu tớ với! 🥺💕",
-    "Breaking news: Có người muốn share bỏng ngô với cậu nè! 🍿✨",
-    "Tớ book ghế đôi rồi, thiếu mỗi người ngồi cạnh thôi. Hint: là cậu đó! 😊"
+    "Cuối tuần đi xem phim nhé. Không nhận từ chối. Từ chối thì mình vẫn coi như đồng ý.😜😜"
 ];
 
 // Headlines
