@@ -3,7 +3,7 @@ const config = {
     inviterName: "Toanf",
     movieTitle: "Cậu chọn 🤭🤭",
     cinema: "Gần cậu",
-    datetime: "2025-08-5T19:30:00+07:00",
+    datetime: "2025-08-19T19:30:00+07:00",
     seats: "H10–H11",
     contact: {
         zalo: "0523919941",
