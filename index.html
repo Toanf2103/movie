@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mời cậu đi xem phim cùng tớ 💕</title>
+    <meta name="description" content="Vé đã sẵn sàng, cậu rảnh không nè?">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Mời cậu đi xem phim cùng tớ 💕">
+    <meta property="og:description" content="Vé đã sẵn sàng, cậu rảnh không nè?">
+    <meta property="og:image" content="og-image.png">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="floating-elements">
+        <div class="heart"></div>
+        <div class="star"></div>
+        <div class="heart"></div>
+        <div class="star"></div>
+        <div class="heart"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <i class="fas fa-film"></i>
+            <h1 id="headline">Thông báo gấp: Có người rủ cậu đi xem phim 😳🎬</h1>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="invitation-card">
+            <!-- Cute Sticker/Image -->
+            <div class="cute-sticker">
+                <img src="https://media.giphy.com/media/3oz8xIsloV7zOmt81G/giphy.gif" alt="Cute invitation">
+            </div>
+
+            <!-- Invitation Text -->
+            <div class="invitation-text">
+                <p id="randomInvite" class="invite-message"></p>
+            </div>
+
+            <!-- Movie Info -->
+            <div class="movie-info">
+                <h2><i class="fas fa-ticket"></i> Thông tin buổi chiếu</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <i class="fas fa-film"></i>
+                        <span>Phim: <strong id="movieTitle">Inside Out 2</strong></span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-location-dot"></i>
+                        <span>Rạp: <strong id="cinema">CGV Vincom Đà Nẵng</strong></span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>Ngày: <strong id="showDate">20/08/2025</strong></span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Giờ: <strong id="showTime">19:30</strong></span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-couch"></i>
+                        <span>Ghế: <strong id="seats">H10–H11</strong></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="cta-buttons">
+                <button id="acceptBtn" class="btn btn-accept">
+                    <span>Đi cùng mình</span>
+                    <i class="fas fa-heart"></i>
+                </button>
+                <button id="rescheduleBtn" class="btn btn-reschedule">
+                    <span>Hôm khác nha</span>
+                    <i class="fas fa-clock"></i>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Từ <span id="inviterName">Toàn</span> với 💕</p>
+            <div class="contact-info">
+                <a href="#" id="zaloLink"><i class="fas fa-comment"></i> Zalo</a>
+                <a href="#" id="phoneLink"><i class="fas fa-phone"></i> Gọi</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Popup Accept -->
+    <div id="acceptPopup" class="popup">
+        <div class="popup-content">
+            <div class="confetti-container" id="confettiContainer"></div>
+            <h2>Yay! 🎉</h2>
+            <p>Hẹn hò với phim và… với tớ 😌💕</p>
+            <p class="success-message">See you at the cinema!</p>
+            <button class="btn btn-close" onclick="closeAcceptPopup()">Đóng</button>
+        </div>
+    </div>
+
+    <!-- Date Picker Popup -->
+    <div id="datePickerPopup" class="popup">
+        <div class="popup-content">
+            <h2>Chọn ngày khác nha 📅</h2>
+            <p class="reschedule-message">Không sao nè, sự cute là vĩnh cửu, ta dời lịch chứ không dời tình cảm 😎</p>
+            <div class="date-picker-container">
+                <input type="date" id="newDate" class="date-input">
+                <input type="time" id="newTime" class="time-input" value="19:30">
+            </div>
+            <div class="popup-buttons">
+                <button class="btn btn-confirm" onclick="confirmNewDate()">Xác nhận</button>
+                <button class="btn btn-cancel" onclick="closeDatePickerPopup()">Hủy</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Exit Intent Tooltip -->
+    <div id="exitTooltip" class="exit-tooltip">
+        <div class="tooltip-content">
+            <p>Ê ê, đừng thoát vội chứ 🥺</p>
+            <p>Nhìn cái nút 'Đi cùng mình' kìa, nó đang chớp mắt 👀✨</p>
+            <button class="tooltip-close" onclick="closeExitTooltip()">×</button>
+        </div>
+    </div>
+
+    <!-- Audio -->
+    <audio id="clickSound" preload="auto">
+        <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Canvas for confetti -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
