@@ -21,8 +21,6 @@ const invitationMessages = [
 const headlines = [
     "Thông báo gấp: Có người rủ cậu đi xem phim 😳🎬",
     "Mission: Cứu một chiếc vé phim khỏi cô đơn 💘",
-    "Alert! Alert! Có người muốn hẹn hò với cậu 🚨💕",
-    "Breaking: Vé couple đang tìm chủ nhân 👫✨"
 ];
 
 // Initialize page
