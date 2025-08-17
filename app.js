@@ -61,9 +61,7 @@ function randomizeContent() {
     const randomHeadline = headlines[Math.floor(Math.random() * headlines.length)];
     document.getElementById('headline').textContent = randomHeadline;
     
-    // Random invitation message
-    const randomMessage = invitationMessages[Math.floor(Math.random() * invitationMessages.length)];
-    document.getElementById('randomInvite').textContent = randomMessage;
+    
 }
 
 // Setup event listeners
