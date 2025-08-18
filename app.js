@@ -45,7 +45,7 @@ function loadConfig() {
     
     document.getElementById('showDate').textContent = date.toLocaleDateString('vi-VN', dateOptions);
     document.getElementById('showTime').textContent = date.toLocaleTimeString('vi-VN', timeOptions);
-    document.getElementById('seats').textContent = config.seats;
+    
     
     // Update inviter info
     document.getElementById('inviterName').textContent = config.inviterName;
